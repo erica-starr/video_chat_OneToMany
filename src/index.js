@@ -6,12 +6,16 @@ import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 import { userReducer } from "./store/reducer";
+import { Resizable } from "re-resizable";
 
 export const store = createStore(userReducer);
 ReactDOM.render(
-  <React.StrictMode>
+  <React.StrictMode> 
     <Provider store={store}>
+    
       <App />
+   
+  
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")

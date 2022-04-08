@@ -4,6 +4,8 @@ import Participants from "../Participants/Participants.component";
 import "./MainScreen.css";
 import { connect } from "react-redux";
 import { setMainStream, updateUser } from "../../store/actioncreator";
+import { Resizable } from "re-resizable";
+import Draggable from 'react-draggable'
 
 const MainScreen = (props) => {
   const participantRef = useRef(props.participants);
@@ -73,7 +75,10 @@ const MainScreen = (props) => {
     props.updateUser({ screen: true });
   };
   return (
+    <Draggable>
+    <Resizable>
     <div className="wrapper">
+      
       <div className="main-screen">
         <Participants />
       </div>
@@ -86,6 +91,9 @@ const MainScreen = (props) => {
         />
       </div>
     </div>
+    </Resizable>
+    </Draggable>
+
   );
 };
 
