@@ -5,7 +5,7 @@ import "./MainScreen.css";
 import { connect } from "react-redux";
 import { setMainStream, updateUser } from "../../store/actioncreator";
 import { Resizable } from "re-resizable";
-import Draggable from 'react-draggable'
+import Draggable from "react-draggable";
 
 const MainScreen = (props) => {
   const participantRef = useRef(props.participants);
@@ -92,7 +92,7 @@ const MainScreen = (props) => {
       </div>
     </div>
     </Resizable>
-    </Draggable>
+     </Draggable>
 
   );
 };
